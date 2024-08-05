@@ -1,42 +1,28 @@
-import React, {useContext} from 'react'
+import React from 'react'
 import {
   Button,
   CardBody,
-  CardSubtitle,
   CardText,
   Col,
   CardTitle,
   Card,
 } from "reactstrap";
-import Swal from 'sweetalert2'
-import { Link } from "react-router-dom";
-import { AppContext } from '../../AppContext';
+//import Swal from 'sweetalert2'
 
 export default function Product(props) {
   const { product } = props;
-  const {addCart} = useContext(AppContext)
-  const handle_add = (id) =>{
-    Swal.fire({
-      title: "Add succesful!",
-      icon: "success"
-    })
-    addCart(id)
-  }
   
   return (
     <Col lg={3} md={4} sm={6} xs={6} className="">
       <Card>
         <CardBody>
-          <CardTitle tag="h5">Card title</CardTitle>
-          <CardSubtitle className="mb-2 text-muted" tag="h6">
-            Card subtitle
-          </CardSubtitle>
+          <CardTitle tag="h5">{product.name}</CardTitle>
           <CardText>
-            <h1>product</h1>
-            <p>Info: {product.name}</p>
-            <Link to={`/detail/${product.id}`}>Chi tiết sản phẩm</Link>
+            <p>{product.brand}</p>
+            {/* <a to={`/detail/${product.id}`}>Chi tiết sản phẩm</a> */}
+            <p>{product.price}</p>
           </CardText>
-          <Button className='btn btn-success' onClick={()=>handle_add(product.id)}>Add cart</Button>
+          <Button className='btn btn-success'>Add cart</Button>
         </CardBody>
       </Card>
     </Col>
