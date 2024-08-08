@@ -1,64 +1,65 @@
-import React, {useState} from "react";
-import {Box , AppBar, Toolbar, Container, Typography, MenuItem, Drawer } from "@mui/material"
-import MenuIcon from "@mui/icons-material/Menu";
-import { BsCart3 } from 'react-icons/bs';
-import logo from '../../Images/logo_L_nobg.png';
-import "./header.css"
-
+import React, { useState, useEffect } from 'react';
+import './header.css';
+import logo from '../../Images/logo/logo-n.png'
+import { Badge } from 'antd';
+import { AiOutlineShoppingCart } from "react-icons/ai";
+import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 
 export default function Header() {
-  const [open, setOpen] = useState(false);
-  const toggleDrawer = (newOpen) => () => {
-    setOpen(newOpen);
+  const [isActive, setIsActive] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
+
+  const toggleNavbar = () => setCollapsed(!collapsed)
+
+  const handleScroll = () => {
+    if (window.scrollY > 400) {
+      setIsActive(true);
+    } else {
+      setIsActive(false);
+    }
   };
 
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <div>
-      <AppBar position="fixed" sx={{ bgcolor: "transparent"}}>
-        <Container maxWidth="lg">
-          <Toolbar sx={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-            <Box sx={{ display: "flex", alignItems: "center" }}>
-              <img className="logo" src={logo} alt="logo" />
-            </Box>
-            <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2 }}>
-              <MenuItem>
-                <Typography variant="body2" color="text.primary">Trang chủ</Typography>
-              </MenuItem>
-              <MenuItem>
-                <Typography variant="body2" color="text.primary">Sản phẩm</Typography>
-              </MenuItem>
-              <MenuItem>
-                <Typography variant="body2" color="text.primary">Blog</Typography>
-              </MenuItem>
-              <MenuItem>
-                <Typography variant="body2" color="text.primary">Liên hệ</Typography>
-              </MenuItem>
-            </Box>
-            <Box sx={{ display: "flex", alignItems: "center" }}>
-              <BsCart3 style={{ fontSize: '1.5rem', marginLeft: 2 }} />
-            </Box>
-            <Box sx={{ display: { sm: "flex", md: "none" } }}>
-              <MenuIcon onClick={toggleDrawer(true)} />
-              <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
-                <Box sx={{ width: 250 }}>
-                  <MenuItem>
-                    <Typography variant="body2">Trang chủ</Typography>
-                  </MenuItem>
-                  <MenuItem>
-                    <Typography variant="body2">Sản phẩm</Typography>
-                  </MenuItem>
-                  <MenuItem>
-                    <Typography variant="body2">Blog</Typography>
-                  </MenuItem>
-                  <MenuItem>
-                    <Typography variant="body2">Liên hệ</Typography>
-                  </MenuItem>
-                </Box>
-              </Drawer>
-            </Box>
-          </Toolbar>
-        </Container>
-      </AppBar>
-    </div>
+      <Navbar className={isActive ?'menu active show':'menu'} expand='md'>
+        <NavbarBrand href="/" className="me-auto">
+          <img className='logo-h' src={logo} alt='logo Trùm nón'/>
+        </NavbarBrand>
+        <Nav navbar className="order-md-2 me-4">
+          <NavItem>
+            <NavLink  className='cart-icon' href='/'>
+              <Badge color='#0068C8' count={5}>
+                <AiOutlineShoppingCart shape="square" />
+              </Badge>
+            </NavLink>
+          </NavItem>
+        </Nav>
+        <NavbarToggler onClick={toggleNavbar} className="me-2 order-md-3" />
+        <Collapse isOpen={!collapsed} navbar>
+          <Nav navbar>
+            <NavItem>
+              <NavLink href="/">Trang chủ</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/">Sản phẩm</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/">Blog</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/">Liên hệ</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/">Đăng nhập</NavLink>
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </Navbar>
   );
 }

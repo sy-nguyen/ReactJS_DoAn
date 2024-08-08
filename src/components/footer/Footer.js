@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Row, Container } from "reactstrap";
-import logo from "../../Images/logo_L_nobg.png"
+import logo from "../../Images/logo/logo-d.png"
 import "./footer.css"
 import { FaMapMarkerAlt, FaFacebookSquare, FaTiktok, FaYoutube} from "react-icons/fa";
 import { IoCallSharp } from "react-icons/io5";

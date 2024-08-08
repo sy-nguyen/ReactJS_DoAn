@@ -1,3 +1,49 @@
-.logo{
-    width: 70px;
+.logo-h{
+    margin: 0px 20px;
+    width: 100px;
+}
+.menu.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    transition: transform 3s ease-in-out;
+    transform: translateY(-100%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+  
+.menu.active.show {
+    transform: translateY(0);
+}
+
+.navbar-collapse{
+    display: flex;
+    justify-content: center;
+}
+.navbar-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-weight: 700;
+}
+
+.navbar-nav li a:hover{
+    color: #0068C8;
+}
+
+.navbar-toggler:hover{
+    border: 1px solid #0068C8;
+}
+
+.navbar-nav li{
+    margin: 0px 10px;
+
+}
+
+.cart-icon span svg{
+    height: 25px;
+    width: 25px;
 }

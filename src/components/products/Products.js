@@ -1,11 +1,26 @@
-import React from 'react'
-import { Container, Row } from 'reactstrap';
-// import Product from '../product/Product.js';
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProducts } from "../../redux/productsSlice";
+import {Container, Row} from "reactstrap"
+import Product from "../product/Product";
 
 export default function Products() {
-    return(
-        <Container>
-            Products
-        </Container>
-    )
+  const dispatch = useDispatch();
+  const { products } = useSelector((state) => state.products);
+  useEffect(() => {
+    dispatch(fetchProducts());
+  }, [dispatch]);
+  return (
+    <div>
+        <Container className="py-5">
+            <Row>
+                {
+                    products.map((product, index) => (
+                        <Product key={index} product={product}/>
+                    ))
+                }
+        </Row>
+      </Container>
+    </div>
+  );
 }

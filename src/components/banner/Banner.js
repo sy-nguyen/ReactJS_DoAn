@@ -17,8 +17,8 @@ export default function App() {
     <div className='banner'>  
         <Swiper 
             style={{
-                '--swiper-navigation-color': '#1D337F',
-                '--swiper-pagination-color': '#1D337F',
+                '--swiper-navigation-color': '#0068C8',
+                '--swiper-pagination-color': '#0068C8',
             }}
             spaceBetween={30}
             centeredSlides={true}
