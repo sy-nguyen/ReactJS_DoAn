@@ -33,7 +33,10 @@
 .navbar-nav li a:hover{
     color: #0068C8;
 }
-
+.navbar-toggler{
+    color: #0068C8;
+    border: 1px solid #0068C8;
+}
 .navbar-toggler:hover{
     border: 1px solid #0068C8;
 }
@@ -46,4 +49,8 @@
 .cart-icon span svg{
     height: 25px;
     width: 25px;
+}
+
+.ant-btn-primary{
+    background: #0068C8;
 }

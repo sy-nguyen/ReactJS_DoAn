@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './header.css';
 import logo from '../../Images/logo/logo-n.png'
-import { Badge } from 'antd';
+import { Badge, Input } from 'antd';
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
+
+const { Search } = Input;
+const onSearch = (value, _e, info) => console.log(info?.source, value);
 
 export default function Header() {
   const [isActive, setIsActive] = useState(false);
@@ -31,6 +34,11 @@ export default function Header() {
         <NavbarBrand href="/" className="me-auto">
           <img className='logo-h' src={logo} alt='logo Trùm nón'/>
         </NavbarBrand>
+        <Nav navbar>
+          <NavItem>
+            <Search allowClear enterButton  onSearch={onSearch}/>
+          </NavItem>
+        </Nav>
         <Nav navbar className="order-md-2 me-4">
           <NavItem>
             <NavLink  className='cart-icon' href='/'>
