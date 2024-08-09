@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <Container className="footer">
       <Row>
-        <Col lg={3} md={4} sm={6} xs={6} className="p-4">
+        <Col lg={3} md={4} sm={6} xs={12} className="p-4">
           <ul>
             <li><a href="/" target="_blank"><img className="logo" src={logo} alt="logo" /></a></li>
             <li className="d-flex align-items-center">
@@ -27,7 +27,7 @@ export default function Footer() {
             </li>
           </ul>
         </Col>
-        <Col lg={3} md={4} sm={6} xs={6} className="p-4">
+        <Col lg={3} md={4} sm={6} xs={12} className="p-4">
           <h3 >Về chúng tôi</h3>
           <ul>
             <li><a href="/" >Giới thiệu về công ty</a></li>
@@ -37,7 +37,7 @@ export default function Footer() {
             <li><a href="/" >Tuyển dụng</a></li>
           </ul>
         </Col>
-        <Col lg={3} md={4} sm={6} xs={6} className="p-4">
+        <Col lg={3} md={4} sm={6} xs={12} className="p-4">
           <h3>Chính sách</h3>
           <ul>
             <li><a href="/" >Chính sách đổi trả</a></li>
@@ -45,42 +45,45 @@ export default function Footer() {
             <li><a href="/" >Chính sách bảo hành</a></li>
           </ul>
         </Col>
-        <Col lg={3} md={4} sm={6} xs={6} className="p-4">
-          <h3>Liên kết với chúng tôi</h3>
-          <ul className="contact">
-            <li>
-              <a id="icon-zalo"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://zalo.me/">
-                <SiZalo/>
-              </a>
-            </li>
-            <li>
-              <a id="icon-fb"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.facebook.com/" >
-                  <FaFacebookSquare />
-                  </a>
-                </li>
-            <li>
-              <a id="icon-tiktok"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.tiktok.com/" >
-                <FaTiktok/>
-              </a>
-            </li>
-            <li>
-              <a id="icon-yt" 
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.youtube.com/" >
-                <FaYoutube />
-              </a>
-            </li>
-          </ul>
+        <Col lg={3} md={4} sm={6} xs={12} className="p-4">
+          <div className="col-contact">
+            <h3>Liên kết với chúng tôi</h3>
+            <ul className="contact">
+              <li>
+                <a id="icon-zalo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://zalo.me/">
+                  <SiZalo/>
+                </a>
+              </li>
+              <li>
+                <a id="icon-fb"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.facebook.com/" >
+                    <FaFacebookSquare />
+                    </a>
+                  </li>
+              <li>
+                <a id="icon-tiktok"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.tiktok.com/" >
+                  <FaTiktok/>
+                </a>
+              </li>
+              <li>
+                <a id="icon-yt" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.youtube.com/" >
+                  <FaYoutube />
+                </a>
+              </li>
+            </ul>
+          </div>
+          
         </Col>
       </Row>
     </Container>

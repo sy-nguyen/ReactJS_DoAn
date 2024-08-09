@@ -1,25 +1,23 @@
 import React from 'react'
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Footer from './components/footer/Footer.js';
-import Partner from './components/partner/Partner.js';
-import Banner from './components/banner/Banner.js';
-import ScrollUp from './components/scrollUp/ScrollUp.js';
-import Products from './components/products/Products.js';
-import Header from './components/header/Header.js';
+import Home from './pages/home/Home.js';
+import Product from './pages/product/PageProduct.js';
 import PageCart from './pages/cart/PageCart.js'
+import Register from './pages/register/Register.js';
+import ProductDetail from './pages/productDetail/ProductDetail.js';
 
 
 export default function App() {
   return (
-    <div>
-        <ScrollUp/>
-        <Header/>
-        <Banner/>
-        <Products/>
-        {/* <Partner/> */}
-        {/* <Footer/> */}
-        <PageCart/>
-    </div>
+    <Router>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/cart" element={<PageCart />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
+      </Routes>
+    </Router>
   )
 }

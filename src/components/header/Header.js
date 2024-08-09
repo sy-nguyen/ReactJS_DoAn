@@ -3,7 +3,9 @@ import './header.css';
 import logo from '../../Images/logo/logo-n.png'
 import { Badge, Input } from 'antd';
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
+import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem} from 'reactstrap';
+import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const { Search } = Input;
 const onSearch = (value, _e, info) => console.log(info?.source, value);
@@ -11,6 +13,7 @@ const onSearch = (value, _e, info) => console.log(info?.source, value);
 export default function Header() {
   const [isActive, setIsActive] = useState(false);
   const [collapsed, setCollapsed] = useState(true);
+  const { items } = useSelector(state => state.cart);
 
   const toggleNavbar = () => setCollapsed(!collapsed)
 
@@ -31,7 +34,7 @@ export default function Header() {
 
   return (
       <Navbar className={isActive ?'menu active show':'menu'} expand='md'>
-        <NavbarBrand href="/" className="me-auto">
+        <NavbarBrand href="/cart" className="me-auto">
           <img className='logo-h' src={logo} alt='logo Trùm nón'/>
         </NavbarBrand>
         <Nav navbar>
@@ -41,32 +44,29 @@ export default function Header() {
         </Nav>
         <Nav navbar className="order-md-2 me-4">
           <NavItem>
-            <NavLink  className='cart-icon' href='/'>
-              <Badge color='#0068C8' count={5}>
+            <Link className='cart-icon' href='/'>
+              <Badge color='#0068C8' count={items.length} overflowCount={10} offset={[10,0]}>
                 <AiOutlineShoppingCart shape="square" />
               </Badge>
-            </NavLink>
+            </Link>
           </NavItem>
         </Nav>
         <NavbarToggler onClick={toggleNavbar} className="me-2 order-md-3" />
         <Collapse isOpen={!collapsed} navbar>
-          <Nav navbar>
-            <NavItem>
-              <NavLink href="/">Trang chủ</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/">Sản phẩm</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/">Blog</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/">Liên hệ</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/">Đăng nhập</NavLink>
-            </NavItem>
-          </Nav>
+        <Nav navbar>
+          <NavItem>
+            <Link to="/">Trang chủ</Link>
+          </NavItem>
+          <NavItem>
+            <Link to="/product">Sản phẩm</Link>
+          </NavItem>
+          <NavItem>
+            <Link to="/register">Đăng ký</Link>
+          </NavItem>
+          <NavItem>
+            <Link to="/cart">Giỏ hàng</Link>
+          </NavItem>
+        </Nav>
         </Collapse>
       </Navbar>
   );

@@ -46,6 +46,10 @@ ul li{
     white-space: normal;
 }
 
+.col-contact{
+    width: 80%;
+}
+
 .contact{
     display: flex;
     justify-content: space-between;

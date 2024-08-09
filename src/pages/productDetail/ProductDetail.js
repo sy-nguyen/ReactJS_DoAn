@@ -1,31 +1,26 @@
-import React, { useEffect, useState } from 'react'
-import {useParams} from 'react-router-dom'
-import axios from 'axios'
-import Header from '../../components/header/Header'
-import Footer from '../../components/footer/Footer'
+import React, { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 export default function ProductDetail() {
-    const {id}=useParams()
-    const [data, setData] = useState({})
-    const url ="https://66a07bf97053166bcabb907f.mockapi.io/Student"
-    const fetchData = () =>{
-        axios.get(url + "/" + id)
-        .then(function(res){
-            setData(res.data)
-        })
-        .catch(function(err){
-            console.log(err);
-        });
+  const { id } = useParams();
+  const products = useSelector((state) => state.products.products);
+  const product = products.find((product) => product.id === id);
+
+  useEffect(() => {
+    if (!product) {
     }
-    useEffect(()=>{
-        fetchData();
-    },[])
+  }, [product]);
+
   return (
     <div>
-        <Header/>
-        <h1>Product detail: {id}</h1>
-        <p>name: {data.name}</p>
-        <Footer/>
+      {product && (
+        <div>
+          <h1>{product.name}</h1>
+          <p>{product.description}</p>
+          <p>Giá: {product.price}</p>
+        </div>
+      )}
     </div>
-  )
+  );
 }
