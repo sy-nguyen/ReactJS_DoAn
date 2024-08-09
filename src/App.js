@@ -7,6 +7,7 @@ import Banner from './components/banner/Banner.js';
 import ScrollUp from './components/scrollUp/ScrollUp.js';
 import Products from './components/products/Products.js';
 import Header from './components/header/Header.js';
+import PageCart from './pages/cart/PageCart.js'
 
 
 export default function App() {
@@ -16,8 +17,9 @@ export default function App() {
         <Header/>
         <Banner/>
         <Products/>
-        <Partner/>
-        <Footer/>
+        {/* <Partner/> */}
+        {/* <Footer/> */}
+        <PageCart/>
     </div>
   )
 }

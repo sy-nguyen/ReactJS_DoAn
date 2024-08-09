@@ -6,7 +6,10 @@ import { Rate } from 'antd';
 //import Swal from 'sweetalert2'
 
 export default function Product(props) {
-  const { product } = props;
+  const { product, addItem} = props;
+  const handleAddToCart = () => {
+    addItem(product);
+  }
   
   return (
     <Col lg={3} md={4} sm={6} xs={6} className='mb-3'>
@@ -20,7 +23,7 @@ export default function Product(props) {
           </p>
             {/* <p>discout</p> */}
           <div><Rate disabled defaultValue={product.rating} /></div>
-          <Button className='btn-add'>Add to cart</Button>
+          <Button className='btn-add' onClick={handleAddToCart}>Add to cart</Button>
         </CardBody>
       </Card>
     </Col>
