@@ -4,7 +4,9 @@ import { clearCart, removeItem, changeQuantity} from '../../redux/cartSlice';
 import { Table, Space, Button, Radio, Input} from 'antd';
 import { MinusOutlined, PlusOutlined } from '@ant-design/icons';
 import { Container, Row, Col } from 'reactstrap';
+import imgCart from '../../Images/cart-empty.png'
 import './cart.css'
+import { Link } from 'react-router-dom';
 
 
 export default function Cart() {
@@ -52,13 +54,13 @@ export default function Cart() {
         {
             dataIndex: 'images',
             key: 'images',
-            render: (images) => <img src={images[0]} alt="Product" width={50} height={50} />,
+            render: (images, record) => <Link to={`/product/${record.id}`} className='product-name'><img src={images[0]} alt="Product" width={50} height={50} /></Link>,
          },
         {
             title: 'Sản phẩm',
             dataIndex: 'name',
             key: 'name',
-            render: (text) => <a href='?' className='product-name'>{text}</a>,
+            render: (text, record) => <Link to={`/product/${record.id}`} className='product-name'>{text}</Link>,
         },
         {
             title: 'Đơn giá',
@@ -112,7 +114,15 @@ export default function Cart() {
     return (
     <div>
         <Container>
-            {items.length === 0 && <p>Giỏ hàng rỗng</p>}
+            {
+                items.length === 0 && (
+                    <div className='cart-empty'>
+                        <img src={imgCart} alt='Cart empty'/>
+                        <p>Giỏ hàng của bạn đang trống</p>
+                        <Link to="/product"><Button type='primary' size='large'>Quay lại mua sắm</Button></Link>                        
+                    </div>
+                )
+            }
             {items.length > 0 && (
                 <Row>
                     <Col xl={12} xxl={8} className='col-cart'>

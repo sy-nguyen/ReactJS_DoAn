@@ -1,0 +1,37 @@
+.rate{
+    text-align: center;
+    padding: 20px;
+    font-size: 15px;
+}
+.customer-reviews{
+    margin: 20px 0px;
+}
+.customer-reviews .ant-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.customer-avatar img{
+    width: 100%;
+    max-width: 150px;
+    padding: 10px;
+}
+.content-review{
+    padding: 20px;
+}
+.content-review p{
+    font-size: 15px;
+    color: #848484;
+}
+.content-review .info-review{
+    font-size: 12px; 
+}
+.content-review .info-review .name-customer{
+    font-weight: 800;
+}
+.content-review .info-review .review-date{
+    color: #848484;
+    text-transform: uppercase;
+}
+
+

@@ -44,7 +44,7 @@ export default function Header() {
         </Nav>
         <Nav navbar className="order-md-2 me-4">
           <NavItem>
-            <Link className='cart-icon' href='/'>
+            <Link className='cart-icon' to='/cart'>
               <Badge color='#0068C8' count={items.length} overflowCount={10} offset={[10,0]}>
                 <AiOutlineShoppingCart shape="square" />
               </Badge>

@@ -1,0 +1,23 @@
+.product-description p{
+    font-size: 16px;
+}
+.product-description img{
+    width: 100%;
+}
+.product-description .ant-row{
+    padding: 20px 0px;
+}
+
+.product-description .ant-col{
+    padding: 20px;
+}
+
+.product-description .ant-col h4{
+    padding: 20px 0px;
+}
+
+.product-description .ant-col ul{
+    font-size: 16px;
+    list-style-type:initial;
+    padding-left: 10px;
+}

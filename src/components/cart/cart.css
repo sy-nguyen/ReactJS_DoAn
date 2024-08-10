@@ -1,3 +1,20 @@
+.cart-empty{
+    text-align: center;
+    padding: 50px;
+    padding-top: 0px;
+}
+.cart-empty img{
+    height: 300px;
+    width: 300px;
+    opacity: .7;
+}
+.cart-empty p{
+    margin-bottom: 40px;
+}
+
+.cart-empty a button{
+    padding: 20px;
+}
 .col-cart{
     margin-bottom: 50px;
 }

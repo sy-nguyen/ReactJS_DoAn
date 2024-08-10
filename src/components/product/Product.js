@@ -20,7 +20,9 @@ export default function Product(props) {
           {product.discout !== "0" ? (
             <Badge.Ribbon text={`-${product.discout}%`} color="red">
               <Card>
-                  <img className='p-1' alt="Sample" src={product.images[0]}/>
+                <Link className='card-img' to={`/product/${product.id}`}>
+                  <img className="p-1" alt="Sample" src={product.images[0]} />
+                </Link>
                 <CardBody>
                   <Link to={`/product/${product.id}`}>
                     <p className='product-name'>{product.name}</p>
@@ -39,7 +41,9 @@ export default function Product(props) {
             </Badge.Ribbon>
           ) : (
             <Card>
-                <img className='p-1' alt="Sample" src={product.images[0]} onClick={() => {window.location.href = `/product/${product.id}`}}/>
+                <Link className='card-img' to={`/product/${product.id}`}>
+                  <img className="p-1" alt="Sample" src={product.images[0]} />
+                </Link>
               <CardBody>
                 <Link to={`/product/${product.id}`}>
                   <p className='product-name'>{product.name}</p>
@@ -58,7 +62,9 @@ export default function Product(props) {
         product.discout !== "0" ? (
           <Badge.Ribbon text={`-${product.discout}%`} color="red">
             <Card>
-                <img className='p-1' alt="Sample" src={product.images[0]}/>
+              <Link className='card-img' to={`/product/${product.id}`}>
+                <img className="p-1" alt="Sample" src={product.images[0]} />
+              </Link>
               <CardBody>
                 <Link to={`/product/${product.id}`}>
                   <p className='product-name'>{product.name}</p>
@@ -77,7 +83,9 @@ export default function Product(props) {
           </Badge.Ribbon>
         ) : (
           <Card>
-              <img className='p-1' alt="Sample" src={product.images[0]}/>
+              <Link className='card-img' to={`/product/${product.id}`}>
+                <img className="p-1" alt="Sample" src={product.images[0]} />
+              </Link>
             <CardBody>
               <Link to={`/product/${product.id}`}>
                 <p className='product-name'>{product.name}</p>

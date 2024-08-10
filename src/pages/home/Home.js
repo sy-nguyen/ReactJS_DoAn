@@ -11,6 +11,7 @@ export default function Home() {
         <ScrollUp/>
         <Header/>
         <Banner/>
+        
         <Partner/>
         <Footer/>
     </div>

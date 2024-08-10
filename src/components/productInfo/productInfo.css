@@ -1,0 +1,47 @@
+.brand-link{
+    color: #848484;
+}
+.name-product{
+    margin: 10px 0px;
+}
+.rate-product{
+    margin: 10px 0px;
+}
+.rate-product ul, .rate-product .ant-space-item {
+    margin-right: 15px;
+}
+.price-product{
+    margin: 10px 0px;
+}
+.price-product span{
+    margin-right: 10px;
+}
+.thong-tin{
+    margin: 20px 0px;
+}
+.radio-size{
+    margin: 20px 0px;
+}
+.ant-radio-group{
+    padding-left: 20px;
+}
+.discout{
+    font-size: 15px;
+    color: #000;
+}
+.so-luong{
+    display: flex;
+    align-items: center;
+    padding: 20px 0px;
+}
+.so-luong p{
+    margin: 0px 20px 0px 0px;
+}
+.button-add-cart{
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px;
+    font-size: 15px;
+    background: #0068C8;
+    color: #fff;
+}
