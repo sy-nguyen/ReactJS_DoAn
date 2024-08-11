@@ -6,9 +6,9 @@ import { Rate, Badge } from 'antd';
 
 export default function Product(props) {
   const { product, addItem} = props;
-  const c = 1
+  const quantity = 1
   const handleAddToCart = () => {
-    addItem({product,c});
+    addItem({product,quantity});
   }
 
   const discountPrice = product.price - (product.price * product.discout / 100);

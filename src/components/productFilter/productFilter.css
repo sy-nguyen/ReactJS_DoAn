@@ -1,0 +1,48 @@
+.inline-checkbox {
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.inline-checkbox span{
+    font-size: 16px;
+}
+.inline-checkbox .count-product{
+    color: #848484;
+}
+.filter-control{
+    display: flex;
+    justify-content: space-between;
+}
+.filter-control .btn-apply-filter{
+    background: #fff  !important;
+    width: 47%;
+    color: #0068C8  !important;
+    font-weight: 700;
+    border: 1px solid #0068C8  !important;
+}
+.filter-control .btn-reset-filter{
+    background: #fff !important;
+    width: 47%;
+    color: #DD2831  !important;
+    font-weight: 700;
+    border: 1px solid #DD2831  !important;
+}
+.filter-control .btn-apply-filter:hover{
+    background: #0068C8  !important;
+    color: #fff  !important;
+    border: 1px solid #0068C8  !important;
+}
+.filter-control .btn-reset-filter:hover{
+    background: #DD2831  !important;
+    color: #fff  !important;
+    border: 1px solid #DD2831  !important;
+}
+.btn-calcel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #DD2831  !important;
+    color: #fff  !important;
+    border: 1px solid #DD2831  !important;
+}

@@ -1,0 +1,39 @@
+.content-filter{
+    padding: 0.5em;
+    font-size: 16px;
+}
+.content-filter .filter h3{
+    font-size: 16px;
+    font-weight: 800;
+    padding-top: 15px;
+    margin-bottom: 25px;
+}
+.filter{
+    margin-bottom: 25px;
+    
+}
+.btn-drawer {
+    display: none;
+}
+.btn-search{
+    width: 500px;
+    padding: 20px 50px;
+    margin: 20px auto;
+}
+
+.display-filter{
+    display: flex;
+    justify-content:space-between;
+    padding: 20px;
+    position: relative;
+}
+.btn-drop{
+    position: absolute;
+    right: 0;
+}
+  
+@media (max-width: 992px) {
+    .btn-drawer {
+      display: block;
+    }
+}

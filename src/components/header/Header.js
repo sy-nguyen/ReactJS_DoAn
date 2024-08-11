@@ -37,11 +37,6 @@ export default function Header() {
         <NavbarBrand href="/cart" className="me-auto">
           <img className='logo-h' src={logo} alt='logo Trùm nón'/>
         </NavbarBrand>
-        <Nav navbar>
-          <NavItem>
-            <Search allowClear enterButton  onSearch={onSearch}/>
-          </NavItem>
-        </Nav>
         <Nav navbar className="order-md-2 me-4">
           <NavItem>
             <Link className='cart-icon' to='/cart'>
@@ -61,10 +56,10 @@ export default function Header() {
             <Link to="/product">Sản phẩm</Link>
           </NavItem>
           <NavItem>
-            <Link to="/register">Đăng ký</Link>
+            <Link to="/">Blog</Link>
           </NavItem>
           <NavItem>
-            <Link to="/cart">Giỏ hàng</Link>
+            <Link to="/">Liên hệ</Link>
           </NavItem>
         </Nav>
         </Collapse>
