@@ -1,0 +1,18 @@
+.swiper-wrapper{
+    padding: 10px 0px;
+}
+.title-swiper{
+    display: flex;
+    justify-content: space-between;
+}
+.title-list{
+    font-size: 24;
+    font-weight: 700;
+}
+
+.swiper-button-next{
+    transform: translateX(45%);
+}
+.swiper-button-prev{
+    transform: translateX(-45%);
+}

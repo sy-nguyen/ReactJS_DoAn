@@ -1,0 +1,33 @@
+.subscribe-box{
+    padding: 70px;
+    background: url('../../Images/bg-subscribe.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.container-subscribe{
+    padding: 50px;
+    background: #fff;
+    border-radius: 15px;
+}
+.container-subscribe h3{
+    font-size: 25px;
+    font-weight: 800;
+}
+.container-subscribe .ant-col{
+    margin: 0px auto;
+}
+.ant-form-item-control-input-content{
+    transform: translateY(30%);
+}
+#subscribe_form_email{
+    width: 95%;
+}
+/* ant-form-item-control-input{
+    
+} */
+@media (min-width: 768px) {
+    .container-subscribe h3{
+        text-align: center;
+    }
+}
+

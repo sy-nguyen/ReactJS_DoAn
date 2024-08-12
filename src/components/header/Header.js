@@ -6,9 +6,8 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem} from 'reactstrap';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { GoPerson } from "react-icons/go";
 
-const { Search } = Input;
-const onSearch = (value, _e, info) => console.log(info?.source, value);
 
 export default function Header() {
   const [isActive, setIsActive] = useState(false);
@@ -37,13 +36,14 @@ export default function Header() {
         <NavbarBrand href="/cart" className="me-auto">
           <img className='logo-h' src={logo} alt='logo Trùm nón'/>
         </NavbarBrand>
-        <Nav navbar className="order-md-2 me-4">
+        <Nav navbar className="order-md-2 me-4 nav-icon d-flex flex-nowrap">
           <NavItem>
             <Link className='cart-icon' to='/cart'>
               <Badge color='#0068C8' count={items.length} overflowCount={10} offset={[10,0]}>
                 <AiOutlineShoppingCart shape="square" />
               </Badge>
             </Link>
+            <GoPerson className='person-icon'/>
           </NavItem>
         </Nav>
         <NavbarToggler onClick={toggleNavbar} className="me-2 order-md-3" />

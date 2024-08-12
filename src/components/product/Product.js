@@ -14,7 +14,7 @@ export default function Product(props) {
   const discountPrice = product.price - (product.price * product.discout / 100);
   
   return (
-    <Col lg={3} md={4} sm={6} xs={6} className='mb-3'>
+    <div className='mb-3'>
       {product.status === "new" ? (
         <Badge.Ribbon text="Mới" color="blue">
           {product.discout !== "0" ? (
@@ -100,6 +100,6 @@ export default function Product(props) {
           </Card>
         )
       )}
-    </Col>
+    </div>
   );
 }

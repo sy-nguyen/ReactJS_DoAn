@@ -10,7 +10,9 @@
 }
 .filter{
     margin-bottom: 25px;
-    
+}
+.row-show{
+    border-left: 1px solid #848484;
 }
 .btn-drawer {
     display: none;
@@ -28,12 +30,15 @@
     position: relative;
 }
 .btn-drop{
-    position: absolute;
+    position: relative;
     right: 0;
 }
   
 @media (max-width: 992px) {
     .btn-drawer {
       display: block;
+    }
+    .row-show{
+        border-left: none;
     }
 }

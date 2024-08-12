@@ -211,10 +211,12 @@ export default function Products() {
             </div>
           </Col>
           <Col lg={9} md={12} sm={12} xs={12} className="show-products">
-            <Row>
+            <Row className="row-show">
               {
                 paginatedProducts.map((product, index) => (
-                  <Product key={index} product={product} addItem={handleAddItem} />
+                  <Col key={index} xl={3} lg={4} sm={6} xs={6} className='mb-3'>
+                    <Product  product={product} addItem={handleAddItem} />
+                  </Col>
                 ))
               }
             </Row>
