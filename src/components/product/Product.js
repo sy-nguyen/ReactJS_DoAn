@@ -3,12 +3,18 @@ import {Button, CardBody, Col, Card} from "reactstrap";
 import { Link } from 'react-router-dom';
 import './product.css'
 import { Rate, Badge } from 'antd';
+import Swal from 'sweetalert2';
 
 export default function Product(props) {
   const { product, addItem} = props;
   const quantity = 1
   const handleAddToCart = () => {
     addItem({product,quantity});
+    Swal.fire({
+      title: "Thành công!",
+      text: "Sản phẩm đã được thêm vào giỏ hàng!",
+      icon: "success"
+    });
   }
 
   const discountPrice = product.price - (product.price * product.discout / 100);

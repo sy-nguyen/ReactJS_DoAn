@@ -50,7 +50,6 @@
 .cart-icon span svg, svg.person-icon{
     height:27px;
     width: 27px;
-    margin-right: 30px;
 }
 
 svg.person-icon{
@@ -62,4 +61,18 @@ svg.person-icon{
 }
 .person-icon.btn.btn-secondary{
     padding: 0;
+}
+.nav-icon li .dropdown button:hover{
+    background: #fff;
+    color: #0068C8;
+}
+.nav-icon li .dropdown button svg{
+    height:27px;
+    width: 27px;
+    color: #000;
+}
+@media (max-width: 768px) {
+    .navbar-expand-md .navbar-nav.nav-icon {
+        flex-direction: row !important;
+    }
 }

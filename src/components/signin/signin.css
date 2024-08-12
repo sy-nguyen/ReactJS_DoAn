@@ -1,0 +1,50 @@
+.btn-bg-signin{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+    background-color: #0068C8;
+}
+.btn-login img{
+    width: 30%;
+}
+.btn-login{
+    width: 500px;
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.btn-login h3{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 800;
+    text-transform: uppercase;
+} 
+
+.btn-login .btn-input{
+    width: 80%;
+    height: 50px;
+}
+.text-mk{
+    margin: 0;
+}
+.btn-sigin{
+    background: #0068C8;
+    color: #fff;
+    font-weight: 700;
+}
+.icon-lienket{
+    padding-top: 20px;
+    margin: 20px auto;
+    width: 40%;
+    color: #0068C8;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

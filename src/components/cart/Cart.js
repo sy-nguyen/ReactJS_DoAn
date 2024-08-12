@@ -7,6 +7,7 @@ import { Container, Row, Col } from 'reactstrap';
 import imgCart from '../../Images/cart-empty.png'
 import './cart.css'
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 
 export default function Cart() {
@@ -49,6 +50,27 @@ export default function Cart() {
     const formatPrice = (price) => {
         return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(price);
     };
+
+    const handleClearCart = () => {
+        Swal.fire({
+          title: "Bạn có chắc chắn?",
+          text: "Bạn sẽ không thể hoàn tác hành động này!",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Có, xóa tất cả!"
+        }).then((result) => {
+          if (result.isConfirmed) {
+            dispatch(clearCart());
+            Swal.fire({
+              title: "Đã xóa!",
+              text: "Giỏ hàng của bạn đã được xóa.",
+              icon: "success"
+            });
+          }
+        });
+      }
   
     const columns = [
         {
@@ -127,7 +149,7 @@ export default function Cart() {
                 <Row>
                     <Col xl={12} xxl={8} className='col-cart'>
                         <Table columns={columns} dataSource={items} />
-                        <Button className='mb-5' type="primary" danger onClick={() => dispatch(clearCart())}>Xóa tất cả</Button>
+                        <Button className='mb-5' type="primary" danger onClick={() => handleClearCart()}>Xóa tất cả</Button>
                     </Col>
                     <Col xl={8} xxl={4} offset-xl={2} className='col-thanh-toan'>
                     <div className='p-3 btn-cart-totals'>

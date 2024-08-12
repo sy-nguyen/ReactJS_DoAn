@@ -12,6 +12,7 @@ import { Col, Row, Tabs,} from 'antd';
 import ProductInfo from '../../components/productInfo/ProductInfo';
 import ProductDescription from '../../components/productDescription/ProductDescription';
 import ProductReviews from '../../components/productReviews/ProductReviews';
+import Swal from 'sweetalert2';
 
 export default function ProductDetail() {
   const dispatch = useDispatch();
@@ -21,6 +22,11 @@ export default function ProductDetail() {
   const [quantity, setQuantity] = useState(1);
   const handleAddItem = (product, quantity) => {
     dispatch(addItem({ product, quantity }));
+    Swal.fire({
+      title: "Thành công!",
+      text: "Sản phẩm đã được thêm vào giỏ hàng!",
+      icon: "success"
+    });
   }
 
   useEffect(() => {

@@ -12,9 +12,18 @@
 .container-subscribe h3{
     font-size: 25px;
     font-weight: 800;
+    text-align: left;
 }
 .container-subscribe .ant-col{
     margin: 0px auto;
+}
+
+.container-subscribe .box-title-subscribe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+    text-align: left;
 }
 .ant-form-item-control-input-content{
     transform: translateY(30%);
@@ -25,7 +34,7 @@
 /* ant-form-item-control-input{
     
 } */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .container-subscribe h3{
         text-align: center;
     }

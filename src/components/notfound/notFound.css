@@ -1,0 +1,10 @@
+.co-notfound{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.img-notfound{
+    width: 30%;
+    overlay: 0.7;
+}

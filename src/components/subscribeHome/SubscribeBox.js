@@ -11,7 +11,7 @@ export default function SubscribeBox() {
         <div className='subscribe-box'>
             <div className='container-subscribe'>
                 <Row>
-                    <Col lg={12} md={24}>
+                    <Col lg={12} md={24} className='box-title-subscribe'>
                         <h3 className='title-subscribe'>Đăng ký nhận tin mới và được giảm giá 20%</h3>
                     </Col>
                     <Col lg={12} md={24}>
