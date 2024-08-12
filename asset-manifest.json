@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ReactJS_DoAn/static/css/main.86c09e99.css",
-    "main.js": "/ReactJS_DoAn/static/js/main.ebc3a2d7.js",
+    "main.css": "/ReactJS_DoAn/static/css/main.0c0c3cd2.css",
+    "main.js": "/ReactJS_DoAn/static/js/main.0cb8e63d.js",
     "static/media/banner5.jpg": "/ReactJS_DoAn/static/media/banner5.4651e80f8a414bbec3c1.jpg",
     "static/media/banner2.jpg": "/ReactJS_DoAn/static/media/banner2.a896098412daf235c3ce.jpg",
     "static/media/24.1.jpg": "/ReactJS_DoAn/static/media/24.1.d4a94e7d5527ed5ab2aa.jpg",
@@ -180,11 +180,11 @@
     "static/media/avatar.png": "/ReactJS_DoAn/static/media/avatar.5ee38c0428ddd8220a5e.png",
     "static/media/img2.png": "/ReactJS_DoAn/static/media/img2.d1bee063b45bf697ea57.png",
     "index.html": "/ReactJS_DoAn/index.html",
-    "main.86c09e99.css.map": "/ReactJS_DoAn/static/css/main.86c09e99.css.map",
-    "main.ebc3a2d7.js.map": "/ReactJS_DoAn/static/js/main.ebc3a2d7.js.map"
+    "main.0c0c3cd2.css.map": "/ReactJS_DoAn/static/css/main.0c0c3cd2.css.map",
+    "main.0cb8e63d.js.map": "/ReactJS_DoAn/static/js/main.0cb8e63d.js.map"
   },
   "entrypoints": [
-    "static/css/main.86c09e99.css",
-    "static/js/main.ebc3a2d7.js"
+    "static/css/main.0c0c3cd2.css",
+    "static/js/main.0cb8e63d.js"
   ]
 }
